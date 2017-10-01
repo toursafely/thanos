@@ -1,0 +1,53 @@
+# Database settings.
+
+environment: DEVELOPMENT
+
+database:
+  driverClass: com.mysql.jdbc.Driver
+  user: root
+  password: root
+  url: jdbc:mysql://localhost:3306/tour_safely
+  minSize: 3
+  maxSize: 5
+  initialSize: 3
+  properties:
+    hibernate.generate_statistics: false
+
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 9090
+
+  adminConnectors:
+    - type: http
+      port: 9091
+
+
+# Logging settings.
+logging:
+  level: INFO
+
+  appenders:
+    - type: file
+      threshold: ALL
+      logFormat: "%-6level [%d{HH:mm:ss.SSS}] [%t] %logger{5} - %X{code} %msg %n"
+      currentLogFilename: /var/log/thanos-backend.log
+      archivedLogFilenamePattern: /var/log/thanos-backend-%d{yyyy-MM-dd}-%i.log.gz
+      archivedFileCount: 7
+      timeZone: IST
+      maxFileSize: 100MB
+
+# the key needs to match the suffix of the renderer
+#viewRendererConfiguration:
+#    .ftl:
+#        strict_syntax: yes
+#        whitespace_stripping: yes
+#
+#metrics:
+#  reporters:
+#    - type: graphite
+#      host: localhost
+#      port: 2003
+#      prefix: example
+#      frequency: 1m

@@ -2,3 +2,5 @@
 thanos.iml
 /src/main/main.iml
 /src/test/test.iml
+/target/
+/dependency-reduced-pom.xml
