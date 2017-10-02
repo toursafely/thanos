@@ -2,13 +2,11 @@ package com.toursafely.thanos.resource;
 
 import com.codahale.metrics.annotation.Timed;
 import com.toursafely.thanos.api.User;
+import com.toursafely.thanos.model.LoginRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/user")
@@ -23,8 +21,28 @@ public class UserRes {
     }
 
     @GET
+    @Path("/{userId}")
     @Timed
-    public User getUser() {
+    public User getUser(@PathParam("userId") String userId) {
+        return new User();
+    }
+
+    @POST
+    @Timed
+    public User createUser(User user) {
+        return new User();
+    }
+
+    @PUT
+    @Timed
+    public User updateUser(User user) {
+        return user;
+    }
+
+    @POST
+    @Timed
+    @Path("/login")
+    public User login(LoginRequest loginRequest) {
         return new User();
     }
 }
