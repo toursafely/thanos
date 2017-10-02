@@ -1,7 +1,7 @@
 package com.toursafely.thanos.resource;
 
 import com.codahale.metrics.annotation.Timed;
-import com.toursafely.thanos.api.User;
+import com.toursafely.thanos.model.User;
 import com.toursafely.thanos.model.LoginRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

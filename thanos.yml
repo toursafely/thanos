@@ -4,8 +4,8 @@ environment: DEVELOPMENT
 
 database:
   driverClass: com.mysql.jdbc.Driver
-  user: root
-  password: root
+  user: ts_user
+  password: ts_password
   url: jdbc:mysql://localhost:3306/tour_safely
   minSize: 3
   maxSize: 5

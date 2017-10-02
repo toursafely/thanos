@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 
-public class AppConfiguration extends Configuration {
+public class ThanosConfiguration extends Configuration {
 
     @NotNull
     @Valid

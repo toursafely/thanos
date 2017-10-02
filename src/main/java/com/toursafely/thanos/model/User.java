@@ -1,4 +1,4 @@
-package com.toursafely.thanos.api;
+package com.toursafely.thanos.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -14,6 +14,7 @@ public class User {
     private String phone;
     private String createdAt;
     private String updatedAt;
+    private String valid;
 
     public Integer getId() {
         return id;
@@ -93,5 +94,13 @@ public class User {
 
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public String getValid() {
+        return valid;
+    }
+
+    public void setValid(String valid) {
+        this.valid = valid;
     }
 }
